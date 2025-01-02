@@ -12,7 +12,7 @@ struct Constants{
     static let bodyText: Font = Font(UIFont(name: "Helvetica-Neue", size: 30) ?? UIFont.systemFont(ofSize: 30))
 }
 
-extension Color{
+extension Color {
     static let backgroundBlue = Color("background")
     static let textBlue = Color("text")
 
