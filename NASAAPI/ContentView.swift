@@ -12,7 +12,7 @@ struct ContentView: View {
     @State var data = FetchData()
     
     var body: some View {
-        ImageView(data:$data)
+        MainScrollView(data:$data)
     }
 }
 
