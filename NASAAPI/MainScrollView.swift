@@ -16,32 +16,34 @@ struct MainScrollView: View {
         ScrollView {
             
             ForEach(data.response)  { photo in
-
+                
                 HStack {
-                    VStack {
-                        AsyncImage(url: URL(string: photo.url ?? " ")) {
-                            phase in
-                            switch phase {
-                            case .empty:
-                                ProgressView()
-                                
-                            case .success(let image):
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                            case .failure(_):
-                                Image("fnf")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                
-                            @unknown default:
-                                fatalError()
-                            }
-                        }.padding()
-                    }
                     
-                    //Text(photo.date ?? " ")
-                     //   .padding([.trailing, .top], 5)
+                    AsyncImage(url: URL(string: photo.url ?? " ")) {
+                        phase in
+                        switch phase {
+                        case .empty:
+                            ProgressView()
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        case .failure(_):
+                            Image("fnf")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            
+                        @unknown default:
+                            fatalError()
+                        }
+                    }
+                    .font(.title)
+                    .padding([.leading, .top], 10)
+                    
+                    
+                    Text(photo.date ?? " ")
+                        .font(.title)
+                        .padding(.trailing, 10)
                     
                     
                 }
