@@ -13,7 +13,7 @@ struct FetchData {
     
     mutating func getData() async {
         
-        let URLString = "https://api.nasa.gov/planetary/apod?start_date=2024-12-01&end_date=2024-12-31&api_key=l83gOnig610oKVnBAZIT33oL2oPlWMAOMC51aQ5T"
+        let URLString = "https://api.nasa.gov/planetary/apod?start_date=2024-01-01&end_date=2024-12-31&api_key=l83gOnig610oKVnBAZIT33oL2oPlWMAOMC51aQ5T"
         
         guard let url = URL(string:URLString) else {return}
         guard let (data, _) = try? await URLSession.shared.data(from:url) else {return}
