@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A3473DAE2D2725E600A979A3 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3473DAD2D2725E600A979A3 /* FetchData.swift */; };
+		A3473DB02D2DAA6400A979A3 /* MainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3473DAF2D2DAA6400A979A3 /* MainScrollView.swift */; };
 		FCA0CA242D27214C0049239A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA0CA232D27214C0049239A /* Constants.swift */; };
 		FCF6ECA52D120CEC0047338A /* NASAAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6ECA42D120CEC0047338A /* NASAAPIApp.swift */; };
 		FCF6ECA72D120CEC0047338A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6ECA62D120CEC0047338A /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		A3473DAD2D2725E600A979A3 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
+		A3473DAF2D2DAA6400A979A3 /* MainScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScrollView.swift; sourceTree = "<group>"; };
 		FCA0CA232D27214C0049239A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FCF6ECA12D120CEC0047338A /* NASAAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF6ECA42D120CEC0047338A /* NASAAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAPIApp.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				FCF6ECA42D120CEC0047338A /* NASAAPIApp.swift */,
 				FCF6ECA62D120CEC0047338A /* ContentView.swift */,
+				A3473DAF2D2DAA6400A979A3 /* MainScrollView.swift */,
 				FCF6ECB22D120F470047338A /* DatesView.swift */,
 				FCF6ECB42D120F520047338A /* ImageView.swift */,
 				A3473DAD2D2725E600A979A3 /* FetchData.swift */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA0CA242D27214C0049239A /* Constants.swift in Sources */,
+				A3473DB02D2DAA6400A979A3 /* MainScrollView.swift in Sources */,
 				FCF6ECB52D120F520047338A /* ImageView.swift in Sources */,
 				FCF6ECB32D120F470047338A /* DatesView.swift in Sources */,
 				FCF6ECA72D120CEC0047338A /* ContentView.swift in Sources */,
