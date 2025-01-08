@@ -9,22 +9,26 @@ import SwiftUI
 
 struct DatesView: View {
     
-    @State private var selectedDate: Date = Date()
+    @State var selectedDate: Date = Date()
     @Binding var data:FetchData
-
-        var body: some View {
-            VStack(spacing: 30) {
-                DatePicker("Select a Date",
-                           selection: $selectedDate,
-                           displayedComponents: .date)
-            }
-            .padding()
-            
-            //var date: String = selectedDate.ISO8601Format()
-            
-            //Text(date.removeLast(10))
-            
+    
+    
+    var body: some View {
+        VStack(spacing: 30) {
+            DatePicker("Select a Date",
+                       selection: $selectedDate,
+                       displayedComponents: .date)
         }
+        .padding()
+        
+        //            var date: String = String(selectedDate.ISO8601Format().prefix(10))
+        //            Text(date)
+        
+        @State var datePassed: String =  String(selectedDate.ISO8601Format().prefix(10))
+        
+        Text(datePassed)
+        
+    }
 }
 
 #Preview {
