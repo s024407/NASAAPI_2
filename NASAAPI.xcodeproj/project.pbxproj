@@ -63,8 +63,8 @@
 			children = (
 				FCF6ECA42D120CEC0047338A /* NASAAPIApp.swift */,
 				FCF6ECA62D120CEC0047338A /* ContentView.swift */,
-				A3473DAF2D2DAA6400A979A3 /* MainScrollView.swift */,
 				FCF6ECB22D120F470047338A /* DatesView.swift */,
+				A3473DAF2D2DAA6400A979A3 /* MainScrollView.swift */,
 				FCF6ECB42D120F520047338A /* ImageView.swift */,
 				A3473DAD2D2725E600A979A3 /* FetchData.swift */,
 				FCA0CA232D27214C0049239A /* Constants.swift */,
