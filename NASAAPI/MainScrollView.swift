@@ -13,41 +13,42 @@ struct MainScrollView: View {
     
     var body: some View {
         
-        ScrollView {
-            
-            ForEach(data.response)  { photo in
-                
-                HStack {
-                    
-                    AsyncImage(url: URL(string: photo.url ?? " ")) {
-                        phase in
-                        switch phase {
-                        case .empty:
-                            ProgressView()
-                        case .success(let image):
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        case .failure(_):
-                            Image("fnf")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                            
-                        @unknown default:
-                            fatalError()
+        NavigationView {
+            List($data.response) { $photo in
+                NavigationLink {
+                    ImageView(photo: $photo)
+                } label: {
+                    HStack {
+                        AsyncImage(url: URL(string: photo.url ?? " ")) {
+                            phase in
+                            switch phase {
+                            case .empty:
+                                ProgressView()
+                            case .success(let image):
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            case .failure(_):
+                                Image("fnf")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                            @unknown default:
+                                fatalError()
+                            }
                         }
-                    }
-                    .font(.title)
-                    .padding([.leading, .top], 10)
-                    
-                    
-                    Text(photo.date ?? " ")
                         .font(.title)
-                        .padding(.trailing, 10)
-                    
-                    
+                        .padding([.leading, .top, .trailing], 5)
+                        Text(photo.date ?? "N/A")
+                            .foregroundColor(.background)
+                            .font(.caption)
+                    }
                 }
+
             }
+            .navigationTitle("Photos")
+            .font(Constants.headerText)
+            .foregroundColor(.textBlue)
         }
         .task {
             await data.getData()
