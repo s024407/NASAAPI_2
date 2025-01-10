@@ -32,6 +32,7 @@ struct Photo: Codable {
     var date:String?
     var title:String?
     var url:String?
+    var explanation:String?
 }
 
 
@@ -39,5 +40,12 @@ extension Photo : Identifiable {
     var id:String {url ?? " "}
     
     
+}
+
+func findPhoto(photos:[Photo], date:String) -> Photo {
+    for photo in photos {
+        if photo.date == date {return photo}
+    }
+    return Photo()
 }
 

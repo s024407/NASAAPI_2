@@ -10,7 +10,7 @@ import SwiftUI
 struct ImageView: View {
     
     //@Binding var data: FetchData
-    @Binding var photo: Photo
+    var photo: Photo
     
     var body: some View {
         ZStack {
@@ -59,6 +59,6 @@ struct ImageView: View {
 }
 
 #Preview {
-    ImageView(photo: .constant(Photo()))
+    ImageView(photo: Photo())
 }
 

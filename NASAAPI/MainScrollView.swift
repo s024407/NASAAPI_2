@@ -16,7 +16,7 @@ struct MainScrollView: View {
         NavigationView {
             List($data.response) { $photo in
                 NavigationLink {
-                    ImageView(photo: $photo)
+                    ImageView(photo: photo)
                 } label: {
                     HStack {
                         AsyncImage(url: URL(string: photo.url ?? " ")) {
